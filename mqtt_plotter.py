@@ -23,7 +23,7 @@ def update_plot():
     plt.plot(values)
     plt.xlabel("Sample")
     plt.ylabel("Value")
-    plt.title("MQTT Data Plot")
+    plt.title("MQTT Float Data Plot")
     plt.pause(0.001)  # Pause to allow the plot to update
 
 # Create a new MQTT client instance
