@@ -1,6 +1,7 @@
 import paho.mqtt.client as mqtt
 import matplotlib.pyplot as plt
 import numpy as np
+from mqtt_params import BROKER_ADDRESS, MQTT_PORT, KEEP_ALIVE_S
 
 # List to store received values
 values = []
@@ -32,7 +33,7 @@ client = mqtt.Client()
 client.on_message = on_message
 
 # Connect to the MQTT broker
-client.connect("broker.example.com", 1883, 60)  # Replace with your broker address and port
+client.connect(BROKER_ADDRESS, MQTT_PORT, KEEP_ALIVE_S)
 
 # Subscribe to the topic
 topic = "test/float"

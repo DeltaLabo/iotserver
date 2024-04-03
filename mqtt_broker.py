@@ -1,4 +1,5 @@
 import paho.mqtt.server as mqtt
+from mqtt_params import BROKER_ADDRESS, MQTT_PORT
 
 # Define callback functions for events
 def on_connect(client, userdata, flags, rc):
@@ -15,5 +16,5 @@ broker.on_connect = on_connect
 broker.on_message = on_message
 
 # Start the broker
-broker.listen("localhost", 1883)
+broker.listen(BROKER_ADDRESS, MQTT_PORT)
 broker.start()
