@@ -1,6 +1,0 @@
-BROKER_ADDRESS = "192.168.1.145"
-MQTT_PORT = 1883
-KEEP_ALIVE_S = 60
-
-USER = "test"
-PASSWORD = "deltalab"
