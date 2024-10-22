@@ -32,7 +32,7 @@ while True:
 
             if dBA_value > 70.0:
                 dBA_value = int(round(dBA_value, 0))
-                alertzy_data["message"] = alertzy_data["message"].format(dBA_value)
+                alertzy_data["message"] = f"Ruido alto: {dBA_value} dBA"
 
                 requests.post(alertzy_url, data=alertzy_data)
 
