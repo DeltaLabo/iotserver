@@ -170,3 +170,4 @@ cython_debug/
 
 secrets.py
 secrets.h
+lib64
