@@ -40,7 +40,7 @@ while True:
             data = response.json()
 
             if (data["id"] not in aio_last_ids.values()) and not aio_first_run:
-                print(f"[{time.strftime("%d/%m/%Y %H:%M:%S")}] [INFO] [POLLING]: {feed_key}: {response.json()}")
+                print(f"[{time.strftime('%d/%m/%Y %H:%M:%S')}] [INFO] [POLLING]: {feed_key}: {response.json()}")
 
                 match feed_key:
                     case "equivalent-noise-level":
@@ -53,7 +53,7 @@ while True:
 
                             requests.post(alertzy_url, data=alertzy_data)
 
-                            print(f"[{time.strftime("%d/%m/%Y %H:%M:%S")}] [INFO] [ALERTS]: High noise level notification sent.")
+                            print(f"[{time.strftime('%d/%m/%Y %H:%M:%S')}] [INFO] [ALERTS]: High noise level notification sent.")
 
                     case "battery-state":
                         match int(data["value"]):
@@ -61,7 +61,7 @@ while True:
                                 alertzy_data["message"] = "Batería baja. Por favor conecte el cargador."
                                 requests.post(alertzy_url, data=alertzy_data)
 
-                                print(f"[{time.strftime("%d/%m/%Y %H:%M:%S")}] [INFO] [ALERTS]: Low battery notification sent.")
+                                print(f"[{time.strftime('%d/%m/%Y %H:%M:%S')}] [INFO] [ALERTS]: Low battery notification sent.")
                             case 3: # CHARGED
                                 if len(aio_last_bat_states) == aio_max_charged_state_reminders:
                                     aio_last_bat_states.append(int(data["value"]))
@@ -70,15 +70,15 @@ while True:
                                         alertzy_data["message"] = "Batería cargada. Opcionalmente, desconecte el cargador."
                                         requests.post(alertzy_url, data=alertzy_data)
 
-                                        print(f"[{time.strftime("%d/%m/%Y %H:%M:%S")}] [INFO] [ALERTS]:Charged battery notification sent.")
+                                        print(f"[{time.strftime('%d/%m/%Y %H:%M:%S')}] [INFO] [ALERTS]:Charged battery notification sent.")
                                     else:
-                                        print(f"[{time.strftime("%d/%m/%Y %H:%M:%S")}] [INFO] [ALERTS]: Charged battery notification limit reached.")
+                                        print(f"[{time.strftime('%d/%m/%Y %H:%M:%S')}] [INFO] [ALERTS]: Charged battery notification limit reached.")
                                 else:
                                     aio_last_bat_states.append(int(data["value"]))
                                     alertzy_data["message"] = "Batería cargada. Opcionalmente, desconecte el cargador."
                                     requests.post(alertzy_url, data=alertzy_data)
 
-                                    print(f"[{time.strftime("%d/%m/%Y %H:%M:%S")}] [INFO] [ALERTS]:Charged battery notification sent.")
+                                    print(f"[{time.strftime('%d/%m/%Y %H:%M:%S')}] [INFO] [ALERTS]:Charged battery notification sent.")
 
                 aio_last_ids[feed_key] = data["id"]
 
@@ -88,9 +88,9 @@ while True:
                 if None not in aio_last_ids.values():
                     aio_first_run = False
 
-                    print(f"[{time.strftime("%d/%m/%Y %H:%M:%S")}] [INFO] [POLLING]: Finished first run.")
+                    print(f"[{time.strftime('%d/%m/%Y %H:%M:%S')}] [INFO] [POLLING]: Finished first run.")
 
         else:
-            print(f"[{time.strftime("%d/%m/%Y %H:%M:%S")}] [ERROR] [POLLING]: Adafruit IO polling failed, HTTP status code {response.status_code}")
+            print(f"[{time.strftime('%d/%m/%Y %H:%M:%S')}] [ERROR] [POLLING]: Adafruit IO polling failed, HTTP status code {response.status_code}")
 
         time.sleep(2)
