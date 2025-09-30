@@ -45,17 +45,70 @@
         <ownedOperationalActivities xsi:type="org.polarsys.capella.core.data.oa:OperationalActivity"
             id="640c578c-f0e0-47db-829e-ae56f75c3214" name="Root Operational Activity">
           <ownedFunctions xsi:type="org.polarsys.capella.core.data.oa:OperationalActivity"
-              id="aeee85a1-c0fa-4fca-be8b-c37b3ce0666c" name="Collect environmental data"/>
-          <ownedFunctions xsi:type="org.polarsys.capella.core.data.oa:OperationalActivity"
-              id="91369751-adb7-4dc8-8d3f-d26525e89a10" name="Define standards compliance strategy"/>
+              id="aeee85a1-c0fa-4fca-be8b-c37b3ce0666c" name="Collect environmental data">
+            <ownedConstraints xsi:type="org.polarsys.capella.core.data.capellacore:Constraint"
+                id="d70e2886-dd14-4682-8249-b42405b8458c" name="Near real-time" constrainedElements="#aeee85a1-c0fa-4fca-be8b-c37b3ce0666c">
+              <ownedSpecification xsi:type="org.polarsys.capella.core.data.information.datavalue:OpaqueExpression"
+                  id="ebdf9583-a98e-4dc1-96cb-baa80f2266ff">
+                <bodies></bodies>
+                <languages>capella:linkedText</languages>
+              </ownedSpecification>
+            </ownedConstraints>
+            <ownedConstraints xsi:type="org.polarsys.capella.core.data.capellacore:Constraint"
+                id="34c1a1a3-16d8-4051-aa3b-90c38db5b088" name="Low cost per data point"
+                constrainedElements="#aeee85a1-c0fa-4fca-be8b-c37b3ce0666c">
+              <ownedSpecification xsi:type="org.polarsys.capella.core.data.information.datavalue:OpaqueExpression"
+                  id="651682cb-bf91-4a43-ab30-311815e547d1">
+                <bodies></bodies>
+                <languages>capella:linkedText</languages>
+              </ownedSpecification>
+            </ownedConstraints>
+            <ownedConstraints xsi:type="org.polarsys.capella.core.data.capellacore:Constraint"
+                id="7c9bb0ee-75f2-4ba8-8cee-a286b006b7f5" name="Geotagged and timestamped"
+                constrainedElements="#aeee85a1-c0fa-4fca-be8b-c37b3ce0666c">
+              <ownedSpecification xsi:type="org.polarsys.capella.core.data.information.datavalue:OpaqueExpression"
+                  id="6b9e1d55-a8ec-44a4-81cf-0fdf7610984e">
+                <bodies></bodies>
+                <languages>capella:linkedText</languages>
+              </ownedSpecification>
+            </ownedConstraints>
+            <ownedConstraints xsi:type="org.polarsys.capella.core.data.capellacore:Constraint"
+                id="16370bca-463d-4021-a62c-df5835766e9c" name="Large amount of simultaneous data sources"
+                constrainedElements="#aeee85a1-c0fa-4fca-be8b-c37b3ce0666c">
+              <ownedSpecification xsi:type="org.polarsys.capella.core.data.information.datavalue:OpaqueExpression"
+                  id="a17ca9e8-b9b2-443a-93a9-81ba9e0f07b8">
+                <bodies></bodies>
+                <languages>capella:linkedText</languages>
+              </ownedSpecification>
+            </ownedConstraints>
+          </ownedFunctions>
           <ownedFunctions xsi:type="org.polarsys.capella.core.data.oa:OperationalActivity"
               id="2d8e28a5-7721-4019-8f6f-9caaeac9e22c" name="Share data with external entities"/>
           <ownedFunctions xsi:type="org.polarsys.capella.core.data.oa:OperationalActivity"
               id="6faea621-76ba-467c-a060-674150742a0b" name="Derive insights from environmental data"/>
           <ownedFunctions xsi:type="org.polarsys.capella.core.data.oa:OperationalActivity"
-              id="9e2e0991-a6b8-488a-84ae-0a93d50bd4df" name="Automate processes based on environmental data"/>
+              id="9e2e0991-a6b8-488a-84ae-0a93d50bd4df" name="Define physical process responses to environmental data"/>
           <ownedFunctions xsi:type="org.polarsys.capella.core.data.oa:OperationalActivity"
-              id="e8fbcb63-ee59-4007-af76-84d7c71b1f13" name="Monitor automated process failure"/>
+              id="e8fbcb63-ee59-4007-af76-84d7c71b1f13" name="Determine automated process state">
+            <ownedConstraints xsi:type="org.polarsys.capella.core.data.capellacore:Constraint"
+                id="8e636fc1-5be1-4384-b2c8-f9d3ee0c3cfa" name="Geotagged and timestamped"
+                constrainedElements="#e8fbcb63-ee59-4007-af76-84d7c71b1f13">
+              <ownedSpecification xsi:type="org.polarsys.capella.core.data.information.datavalue:OpaqueExpression"
+                  id="4b7f01ed-cf09-4bfb-97b0-47254eb70d34">
+                <bodies></bodies>
+                <languages>capella:linkedText</languages>
+              </ownedSpecification>
+            </ownedConstraints>
+            <ownedConstraints xsi:type="org.polarsys.capella.core.data.capellacore:Constraint"
+                id="517f6b5a-3615-4c5c-9404-3c5ed16ed29c" name="Large amount of process components"
+                constrainedElements="#e8fbcb63-ee59-4007-af76-84d7c71b1f13 #bc862e75-0c0e-421e-9d6c-f91e3b2cabaf">
+              <ownedSpecification xsi:type="org.polarsys.capella.core.data.information.datavalue:OpaqueExpression"
+                  id="f943a86b-4f5a-4420-a492-64d564e602ff">
+                <bodies></bodies>
+                <languages>capella:linkedText</languages>
+              </ownedSpecification>
+            </ownedConstraints>
+          </ownedFunctions>
           <ownedFunctions xsi:type="org.polarsys.capella.core.data.oa:OperationalActivity"
               id="f80b4dbb-c7f1-4259-ba1e-b0b95581cb21" name="Aggregate environmental data"/>
           <ownedFunctions xsi:type="org.polarsys.capella.core.data.oa:OperationalActivity"
@@ -66,12 +119,165 @@
               id="1e7347b8-2d51-460c-a97b-a2247f246623" name="Alter behavior of automated processes"/>
           <ownedFunctions xsi:type="org.polarsys.capella.core.data.oa:OperationalActivity"
               id="5da3fbc7-507d-4996-ab8c-93a07c43168f" name="Bring automated processes out of operation"/>
+          <ownedFunctions xsi:type="org.polarsys.capella.core.data.oa:OperationalActivity"
+              id="dd0d78e9-3785-4bdc-b956-19dfd7de5ff5" name="Manually override process state"/>
+          <ownedFunctions xsi:type="org.polarsys.capella.core.data.oa:OperationalActivity"
+              id="2f443cf6-628e-4648-9f9f-1731d303d740" name="Filter and visualize environmental data">
+            <ownedConstraints xsi:type="org.polarsys.capella.core.data.capellacore:Constraint"
+                id="d6df870a-a4b1-4848-8b63-cd9bdd351d2d" name="Filter by location, time, value, source"
+                constrainedElements="#2f443cf6-628e-4648-9f9f-1731d303d740">
+              <ownedSpecification xsi:type="org.polarsys.capella.core.data.information.datavalue:OpaqueExpression"
+                  id="e344809a-7518-43bc-ae89-5195eb97140f">
+                <bodies></bodies>
+                <languages>capella:linkedText</languages>
+              </ownedSpecification>
+            </ownedConstraints>
+          </ownedFunctions>
+          <ownedFunctions xsi:type="org.polarsys.capella.core.data.oa:OperationalActivity"
+              id="9fa5fe89-3f0b-4870-9eae-925024e7ecf6" name="Store data">
+            <ownedConstraints xsi:type="org.polarsys.capella.core.data.capellacore:Constraint"
+                id="2ab303de-55e8-4feb-8d60-822227765931" name="In massive amounts"
+                constrainedElements="#9fa5fe89-3f0b-4870-9eae-925024e7ecf6">
+              <ownedSpecification xsi:type="org.polarsys.capella.core.data.information.datavalue:OpaqueExpression"
+                  id="1a755747-bce0-4594-8a3c-415f4094c823">
+                <bodies></bodies>
+                <languages>capella:linkedText</languages>
+              </ownedSpecification>
+            </ownedConstraints>
+          </ownedFunctions>
+          <ownedFunctions xsi:type="org.polarsys.capella.core.data.oa:OperationalActivity"
+              id="2cc0c3d3-ec54-445f-9c76-da8ae7c4ef7f" name="Define normal data criteria">
+            <ownedConstraints xsi:type="org.polarsys.capella.core.data.capellacore:Constraint"
+                id="c172d059-6138-467b-a80a-8c3e9f68e4b8" name="Normal is simply defined as not requiring a response from the monitor"
+                constrainedElements="#2cc0c3d3-ec54-445f-9c76-da8ae7c4ef7f">
+              <ownedSpecification xsi:type="org.polarsys.capella.core.data.information.datavalue:OpaqueExpression"
+                  id="47e85075-bb95-4f4c-be31-69261f8324a6">
+                <bodies></bodies>
+                <languages>capella:linkedText</languages>
+              </ownedSpecification>
+            </ownedConstraints>
+          </ownedFunctions>
+          <ownedFunctions xsi:type="org.polarsys.capella.core.data.oa:OperationalActivity"
+              id="95b74103-ce24-4269-b03c-ac3a1f338175" name="Determine if data is outside normal conditions"/>
+          <ownedFunctions xsi:type="org.polarsys.capella.core.data.oa:OperationalActivity"
+              id="bccfd359-8ffb-4ebb-976a-43522c0eaa2d" name="Respond to abnormal data"/>
+          <ownedFunctions xsi:type="org.polarsys.capella.core.data.oa:OperationalActivity"
+              id="1af723e9-6ce9-45bf-94bf-3bcef91a2490" name="Calculate metrics and forecasts over data">
+            <ownedConstraints xsi:type="org.polarsys.capella.core.data.capellacore:Constraint"
+                id="cbcb019b-b0e7-492f-af3c-d8e3e6301944" name="A metric is understood as a deterministic calculation, a forecast refers to the probability of a future event"
+                constrainedElements="#1af723e9-6ce9-45bf-94bf-3bcef91a2490">
+              <ownedSpecification xsi:type="org.polarsys.capella.core.data.information.datavalue:OpaqueExpression"
+                  id="32fc6c01-ea68-42d1-a9a1-23d616db350f">
+                <bodies></bodies>
+                <languages>capella:linkedText</languages>
+              </ownedSpecification>
+            </ownedConstraints>
+          </ownedFunctions>
+          <ownedFunctions xsi:type="org.polarsys.capella.core.data.oa:OperationalActivity"
+              id="bc862e75-0c0e-421e-9d6c-f91e3b2cabaf" name="Update physical process state"/>
+          <ownedFunctions xsi:type="org.polarsys.capella.core.data.oa:OperationalActivity"
+              id="e0ba9e11-ee96-49fa-899f-8ad7c026ba49" name="Record state"/>
+          <ownedFunctions xsi:type="org.polarsys.capella.core.data.oa:OperationalActivity"
+              id="84f21d7e-ee28-40fa-a724-ed15e810952f" name="Record abnormal data occurrence"/>
+          <ownedFunctions xsi:type="org.polarsys.capella.core.data.oa:OperationalActivity"
+              id="e2cb568d-8df3-419f-bd1c-292661bb5bca" name="Filter and visualize process state">
+            <ownedConstraints xsi:type="org.polarsys.capella.core.data.capellacore:Constraint"
+                id="10d86156-1f35-413a-bd54-c3f09561868c" name="Filter by location, time, value, component"
+                constrainedElements="#e2cb568d-8df3-419f-bd1c-292661bb5bca">
+              <ownedSpecification xsi:type="org.polarsys.capella.core.data.information.datavalue:OpaqueExpression"
+                  id="19c7f674-e44a-42ed-9d0f-92a89858873f">
+                <bodies></bodies>
+                <languages>capella:linkedText</languages>
+              </ownedSpecification>
+            </ownedConstraints>
+          </ownedFunctions>
+          <ownedFunctions xsi:type="org.polarsys.capella.core.data.oa:OperationalActivity"
+              id="69aaefe6-a32a-43a2-883f-2c83ddf97623" name="Derive insights from state"/>
+          <ownedFunctions xsi:type="org.polarsys.capella.core.data.oa:OperationalActivity"
+              id="575dfda2-51c9-49f1-a30f-bb476845c538" name="Calculate metrics and forecasts over state data"/>
+          <ownedFunctions xsi:type="org.polarsys.capella.core.data.oa:OperationalActivity"
+              id="5e028a78-f2fe-47be-b856-3271b914a5e4" name="Define normal state criteria"/>
+          <ownedFunctions xsi:type="org.polarsys.capella.core.data.oa:OperationalActivity"
+              id="6a94ef32-3e77-4f4f-8eb9-bfe94c8431d3" name="Determine if state is outside normal conditions"/>
+          <ownedFunctions xsi:type="org.polarsys.capella.core.data.oa:OperationalActivity"
+              id="30b74a1f-8d45-4eed-8b56-f8c1822f341c" name="Record abnormal state occurrence"/>
+          <ownedFunctions xsi:type="org.polarsys.capella.core.data.oa:OperationalActivity"
+              id="2363c46b-d07d-4ff3-ab7e-f5f0351d6733" name="Respond to abnormal state"/>
           <ownedFunctionalExchanges xsi:type="org.polarsys.capella.core.data.fa:FunctionalExchange"
               id="00738ac7-ae01-4de3-aa7c-674f7720184d" name="Shareable data" target="#f80b4dbb-c7f1-4259-ba1e-b0b95581cb21"
               source="#2d8e28a5-7721-4019-8f6f-9caaeac9e22c"/>
           <ownedFunctionalExchanges xsi:type="org.polarsys.capella.core.data.fa:FunctionalExchange"
               id="026c4813-91a6-44f0-bca9-c454231d4254" name="Shareable data" target="#aae03556-e528-494a-83a7-e78584b59389"
               source="#2d8e28a5-7721-4019-8f6f-9caaeac9e22c"/>
+          <ownedFunctionalExchanges xsi:type="org.polarsys.capella.core.data.fa:FunctionalExchange"
+              id="702d7960-6f1c-43c6-bac6-f7c6c4dedb36" name="Curated data" target="#6faea621-76ba-467c-a060-674150742a0b"
+              source="#2f443cf6-628e-4648-9f9f-1731d303d740"/>
+          <ownedFunctionalExchanges xsi:type="org.polarsys.capella.core.data.fa:FunctionalExchange"
+              id="b9c46dd1-90e3-4514-a3e9-33e8cb60b81a" name="Environmental data"
+              target="#bc862e75-0c0e-421e-9d6c-f91e3b2cabaf" source="#aeee85a1-c0fa-4fca-be8b-c37b3ce0666c"/>
+          <ownedFunctionalExchanges xsi:type="org.polarsys.capella.core.data.fa:FunctionalExchange"
+              id="3f7370d6-69a0-462b-89da-0e051e36677e" name="Response definitions"
+              target="#bc862e75-0c0e-421e-9d6c-f91e3b2cabaf" source="#9e2e0991-a6b8-488a-84ae-0a93d50bd4df"/>
+          <ownedFunctionalExchanges xsi:type="org.polarsys.capella.core.data.fa:FunctionalExchange"
+              id="5b289d74-d013-42ce-b068-4b3540f08ed7" name="Environmental data"
+              target="#9fa5fe89-3f0b-4870-9eae-925024e7ecf6" source="#aeee85a1-c0fa-4fca-be8b-c37b3ce0666c"/>
+          <ownedFunctionalExchanges xsi:type="org.polarsys.capella.core.data.fa:FunctionalExchange"
+              id="7b910da8-af0f-43dc-bc6e-57956f1119c4" name="Stored data" target="#2f443cf6-628e-4648-9f9f-1731d303d740"
+              source="#9fa5fe89-3f0b-4870-9eae-925024e7ecf6"/>
+          <ownedFunctionalExchanges xsi:type="org.polarsys.capella.core.data.fa:FunctionalExchange"
+              id="a103bf29-eb09-4208-a65f-edba096d8472" name="Normal conditions criteria"
+              target="#95b74103-ce24-4269-b03c-ac3a1f338175" source="#2cc0c3d3-ec54-445f-9c76-da8ae7c4ef7f"/>
+          <ownedFunctionalExchanges xsi:type="org.polarsys.capella.core.data.fa:FunctionalExchange"
+              id="4ac0362f-b89f-441d-a1f1-abae78b9bd2f" name="Abnormal data" target="#bccfd359-8ffb-4ebb-976a-43522c0eaa2d"
+              source="#95b74103-ce24-4269-b03c-ac3a1f338175"/>
+          <ownedFunctionalExchanges xsi:type="org.polarsys.capella.core.data.fa:FunctionalExchange"
+              id="8cc73cae-52da-416d-9910-5e372b10608e" name="Env. data" target="#95b74103-ce24-4269-b03c-ac3a1f338175"
+              source="#aeee85a1-c0fa-4fca-be8b-c37b3ce0666c"/>
+          <ownedFunctionalExchanges xsi:type="org.polarsys.capella.core.data.fa:FunctionalExchange"
+              id="7930cd7e-bd66-43a6-9233-09150205cd88" name="Env. data" target="#1af723e9-6ce9-45bf-94bf-3bcef91a2490"
+              source="#aeee85a1-c0fa-4fca-be8b-c37b3ce0666c"/>
+          <ownedFunctionalExchanges xsi:type="org.polarsys.capella.core.data.fa:FunctionalExchange"
+              id="dda4f5af-b761-4e2e-b14d-00bb932e5fe7" name="Metrics and forecasts"
+              target="#95b74103-ce24-4269-b03c-ac3a1f338175" source="#1af723e9-6ce9-45bf-94bf-3bcef91a2490"/>
+          <ownedFunctionalExchanges xsi:type="org.polarsys.capella.core.data.fa:FunctionalExchange"
+              id="73a769b7-4ef1-47a1-9b26-504c2fe6333d" name="Physical process state"
+              target="#bc862e75-0c0e-421e-9d6c-f91e3b2cabaf" source="#e8fbcb63-ee59-4007-af76-84d7c71b1f13"/>
+          <ownedFunctionalExchanges xsi:type="org.polarsys.capella.core.data.fa:FunctionalExchange"
+              id="aa8ab846-f75f-49ed-bed7-551f9fb9d0b5" name="Desired state" target="#bc862e75-0c0e-421e-9d6c-f91e3b2cabaf"
+              source="#dd0d78e9-3785-4bdc-b956-19dfd7de5ff5"/>
+          <ownedFunctionalExchanges xsi:type="org.polarsys.capella.core.data.fa:FunctionalExchange"
+              id="fae39e60-1ded-498e-bc13-1820499e8a0d" name="State" target="#e2cb568d-8df3-419f-bd1c-292661bb5bca"
+              source="#e8fbcb63-ee59-4007-af76-84d7c71b1f13"/>
+          <ownedFunctionalExchanges xsi:type="org.polarsys.capella.core.data.fa:FunctionalExchange"
+              id="913e65ad-adcd-4c9f-b668-092af8c80984" name="Physical process state"
+              target="#e0ba9e11-ee96-49fa-899f-8ad7c026ba49" source="#e8fbcb63-ee59-4007-af76-84d7c71b1f13"/>
+          <ownedFunctionalExchanges xsi:type="org.polarsys.capella.core.data.fa:FunctionalExchange"
+              id="ba34d9ee-1fb1-452e-931b-ba5e3cf0da75" name="Abnormal data" target="#84f21d7e-ee28-40fa-a724-ed15e810952f"
+              source="#95b74103-ce24-4269-b03c-ac3a1f338175"/>
+          <ownedFunctionalExchanges xsi:type="org.polarsys.capella.core.data.fa:FunctionalExchange"
+              id="7a5812de-76c3-4f39-9739-9d86b115a980" name="Curated state data"
+              target="#69aaefe6-a32a-43a2-883f-2c83ddf97623" source="#e2cb568d-8df3-419f-bd1c-292661bb5bca"/>
+          <ownedFunctionalExchanges xsi:type="org.polarsys.capella.core.data.fa:FunctionalExchange"
+              id="1a903aba-63be-40e9-abce-2d7978c0b44b" name="State" target="#575dfda2-51c9-49f1-a30f-bb476845c538"
+              source="#e8fbcb63-ee59-4007-af76-84d7c71b1f13"/>
+          <ownedFunctionalExchanges xsi:type="org.polarsys.capella.core.data.fa:FunctionalExchange"
+              id="a0cd2e02-a29b-428f-b359-f9cc1070be74" name="Curated state data"
+              target="#dd0d78e9-3785-4bdc-b956-19dfd7de5ff5" source="#e2cb568d-8df3-419f-bd1c-292661bb5bca"/>
+          <ownedFunctionalExchanges xsi:type="org.polarsys.capella.core.data.fa:FunctionalExchange"
+              id="aa02c1fa-5ae7-431b-b6f3-c3ea8beb8f16" name="State" target="#6a94ef32-3e77-4f4f-8eb9-bfe94c8431d3"
+              source="#e8fbcb63-ee59-4007-af76-84d7c71b1f13"/>
+          <ownedFunctionalExchanges xsi:type="org.polarsys.capella.core.data.fa:FunctionalExchange"
+              id="7d93e846-e00a-4953-80ec-daa0dc113215" name="Normal conditions criteria"
+              target="#6a94ef32-3e77-4f4f-8eb9-bfe94c8431d3" source="#5e028a78-f2fe-47be-b856-3271b914a5e4"/>
+          <ownedFunctionalExchanges xsi:type="org.polarsys.capella.core.data.fa:FunctionalExchange"
+              id="aa243001-3e9a-489c-a260-cd8ef8f81244" name="Abnormal data" target="#30b74a1f-8d45-4eed-8b56-f8c1822f341c"
+              source="#6a94ef32-3e77-4f4f-8eb9-bfe94c8431d3"/>
+          <ownedFunctionalExchanges xsi:type="org.polarsys.capella.core.data.fa:FunctionalExchange"
+              id="25fef519-3b5f-466c-9b78-1a046ade84bb" name="Desired state to respond to abnormal state"
+              target="#dd0d78e9-3785-4bdc-b956-19dfd7de5ff5" source="#2363c46b-d07d-4ff3-ab7e-f5f0351d6733"/>
+          <ownedFunctionalExchanges xsi:type="org.polarsys.capella.core.data.fa:FunctionalExchange"
+              id="47996a58-74c8-4e51-8281-9bc85a39f4c0" name="Abnormal data" target="#2363c46b-d07d-4ff3-ab7e-f5f0351d6733"
+              source="#6a94ef32-3e77-4f4f-8eb9-bfe94c8431d3"/>
         </ownedOperationalActivities>
       </ownedFunctionPkg>
       <ownedAbstractCapabilityPkg xsi:type="org.polarsys.capella.core.data.oa:OperationalCapabilityPkg"
@@ -99,33 +305,91 @@
           <ownedFeatures xsi:type="org.polarsys.capella.core.data.cs:Part" id="6e618a0f-7f81-46e8-b7ef-c018a3e6182f"
               name="Relations manager" abstractType="#9c3f90f3-c7b4-48e7-a5ba-2171e3fb2574"/>
           <ownedFeatures xsi:type="org.polarsys.capella.core.data.cs:Part" id="84cead79-71a0-487e-8b5f-9a76b9f1e368"
-              name="Automation Manager" abstractType="#7b1fae9e-b464-4eeb-951a-0634961a4fa3"/>
+              name="Automation Data Manager" abstractType="#7b1fae9e-b464-4eeb-951a-0634961a4fa3"/>
+          <ownedFeatures xsi:type="org.polarsys.capella.core.data.cs:Part" id="c29615bd-5928-482b-a602-652043db6092"
+              name="Environmental Monitor" abstractType="#55cc4f1a-5700-4ce5-80fa-36afff503165"/>
+          <ownedFeatures xsi:type="org.polarsys.capella.core.data.cs:Part" id="6ca7213e-4dd9-41e2-af78-d5afd15ffcf3"
+              name="Automation Monitor" abstractType="#665b7a9c-0f83-4afd-94d1-864d321320b1"/>
           <ownedEntities xsi:type="org.polarsys.capella.core.data.oa:Entity" id="96d02665-056f-4d96-a080-786cdef81688"
               name="Environmental Data Manager" actor="true" human="true">
             <ownedFunctionalAllocation xsi:type="org.polarsys.capella.core.data.fa:ComponentFunctionalAllocation"
                 id="8a34ed5b-4377-43c0-a988-1c4bc0de6d6a" targetElement="#aeee85a1-c0fa-4fca-be8b-c37b3ce0666c"
                 sourceElement="#96d02665-056f-4d96-a080-786cdef81688"/>
             <ownedFunctionalAllocation xsi:type="org.polarsys.capella.core.data.fa:ComponentFunctionalAllocation"
-                id="24398c75-ab1f-4a98-b27c-465d266e5c6b" targetElement="#6faea621-76ba-467c-a060-674150742a0b"
+                id="42bc8ed5-36ba-4498-b7b6-813d0cdbaace" targetElement="#9fa5fe89-3f0b-4870-9eae-925024e7ecf6"
+                sourceElement="#96d02665-056f-4d96-a080-786cdef81688"/>
+            <ownedFunctionalAllocation xsi:type="org.polarsys.capella.core.data.fa:ComponentFunctionalAllocation"
+                id="4d60cc68-759d-4f62-9aca-87d528022d96" targetElement="#95b74103-ce24-4269-b03c-ac3a1f338175"
+                sourceElement="#96d02665-056f-4d96-a080-786cdef81688"/>
+            <ownedFunctionalAllocation xsi:type="org.polarsys.capella.core.data.fa:ComponentFunctionalAllocation"
+                id="0f7b4bac-07fe-40ce-80e1-cc8d94f4282e" targetElement="#1af723e9-6ce9-45bf-94bf-3bcef91a2490"
+                sourceElement="#96d02665-056f-4d96-a080-786cdef81688"/>
+            <ownedFunctionalAllocation xsi:type="org.polarsys.capella.core.data.fa:ComponentFunctionalAllocation"
+                id="6939abf8-bef9-4146-b5ab-8483fba9ea44" targetElement="#84f21d7e-ee28-40fa-a724-ed15e810952f"
                 sourceElement="#96d02665-056f-4d96-a080-786cdef81688"/>
           </ownedEntities>
           <ownedEntities xsi:type="org.polarsys.capella.core.data.oa:Entity" id="9c3f90f3-c7b4-48e7-a5ba-2171e3fb2574"
               name="Relations manager" actor="true" human="true">
             <ownedFunctionalAllocation xsi:type="org.polarsys.capella.core.data.fa:ComponentFunctionalAllocation"
-                id="c1b2156f-282b-4c1b-8dc7-1a04855cb8cf" targetElement="#91369751-adb7-4dc8-8d3f-d26525e89a10"
-                sourceElement="#9c3f90f3-c7b4-48e7-a5ba-2171e3fb2574"/>
-            <ownedFunctionalAllocation xsi:type="org.polarsys.capella.core.data.fa:ComponentFunctionalAllocation"
                 id="89ea1837-322a-4746-a35d-c48095dee237" targetElement="#2d8e28a5-7721-4019-8f6f-9caaeac9e22c"
                 sourceElement="#9c3f90f3-c7b4-48e7-a5ba-2171e3fb2574"/>
           </ownedEntities>
           <ownedEntities xsi:type="org.polarsys.capella.core.data.oa:Entity" id="7b1fae9e-b464-4eeb-951a-0634961a4fa3"
-              name="Automation Manager" actor="true" human="true">
-            <ownedFunctionalAllocation xsi:type="org.polarsys.capella.core.data.fa:ComponentFunctionalAllocation"
-                id="72a61a25-366b-4bc8-bf65-fedd4ca00d58" targetElement="#9e2e0991-a6b8-488a-84ae-0a93d50bd4df"
-                sourceElement="#7b1fae9e-b464-4eeb-951a-0634961a4fa3"/>
+              name="Automation Data Manager" actor="true" human="true">
             <ownedFunctionalAllocation xsi:type="org.polarsys.capella.core.data.fa:ComponentFunctionalAllocation"
                 id="0eccd00f-7090-48bb-8f3f-a39f7b5c1e26" targetElement="#e8fbcb63-ee59-4007-af76-84d7c71b1f13"
                 sourceElement="#7b1fae9e-b464-4eeb-951a-0634961a4fa3"/>
+            <ownedFunctionalAllocation xsi:type="org.polarsys.capella.core.data.fa:ComponentFunctionalAllocation"
+                id="b77e66da-1c69-4ae3-ab14-c0bc2fb046aa" targetElement="#bc862e75-0c0e-421e-9d6c-f91e3b2cabaf"
+                sourceElement="#7b1fae9e-b464-4eeb-951a-0634961a4fa3"/>
+            <ownedFunctionalAllocation xsi:type="org.polarsys.capella.core.data.fa:ComponentFunctionalAllocation"
+                id="c65a75a8-b843-407b-a9ee-81d47b5ce6fc" targetElement="#e0ba9e11-ee96-49fa-899f-8ad7c026ba49"
+                sourceElement="#7b1fae9e-b464-4eeb-951a-0634961a4fa3"/>
+            <ownedFunctionalAllocation xsi:type="org.polarsys.capella.core.data.fa:ComponentFunctionalAllocation"
+                id="fa9cbdb7-a894-462c-9c56-5301d744a133" targetElement="#575dfda2-51c9-49f1-a30f-bb476845c538"
+                sourceElement="#7b1fae9e-b464-4eeb-951a-0634961a4fa3"/>
+            <ownedFunctionalAllocation xsi:type="org.polarsys.capella.core.data.fa:ComponentFunctionalAllocation"
+                id="94b4a595-e4a1-43fe-bed1-b1c0ed365b0e" targetElement="#6a94ef32-3e77-4f4f-8eb9-bfe94c8431d3"
+                sourceElement="#7b1fae9e-b464-4eeb-951a-0634961a4fa3"/>
+            <ownedFunctionalAllocation xsi:type="org.polarsys.capella.core.data.fa:ComponentFunctionalAllocation"
+                id="a731bc01-1a8c-4f2a-8f28-b42193df1a9b" targetElement="#30b74a1f-8d45-4eed-8b56-f8c1822f341c"
+                sourceElement="#7b1fae9e-b464-4eeb-951a-0634961a4fa3"/>
+          </ownedEntities>
+          <ownedEntities xsi:type="org.polarsys.capella.core.data.oa:Entity" id="55cc4f1a-5700-4ce5-80fa-36afff503165"
+              name="Environmental Monitor" actor="true" human="true">
+            <ownedFunctionalAllocation xsi:type="org.polarsys.capella.core.data.fa:ComponentFunctionalAllocation"
+                id="24398c75-ab1f-4a98-b27c-465d266e5c6b" targetElement="#6faea621-76ba-467c-a060-674150742a0b"
+                sourceElement="#55cc4f1a-5700-4ce5-80fa-36afff503165"/>
+            <ownedFunctionalAllocation xsi:type="org.polarsys.capella.core.data.fa:ComponentFunctionalAllocation"
+                id="77bfa44c-39ab-4423-85b4-c96c1699070c" targetElement="#2f443cf6-628e-4648-9f9f-1731d303d740"
+                sourceElement="#55cc4f1a-5700-4ce5-80fa-36afff503165"/>
+            <ownedFunctionalAllocation xsi:type="org.polarsys.capella.core.data.fa:ComponentFunctionalAllocation"
+                id="a6ca0307-1bcd-4c67-88de-c6e34e61ac9f" targetElement="#2cc0c3d3-ec54-445f-9c76-da8ae7c4ef7f"
+                sourceElement="#55cc4f1a-5700-4ce5-80fa-36afff503165"/>
+            <ownedFunctionalAllocation xsi:type="org.polarsys.capella.core.data.fa:ComponentFunctionalAllocation"
+                id="438ca178-6eec-4cdd-8b75-ef0ae8de9e08" targetElement="#bccfd359-8ffb-4ebb-976a-43522c0eaa2d"
+                sourceElement="#55cc4f1a-5700-4ce5-80fa-36afff503165"/>
+          </ownedEntities>
+          <ownedEntities xsi:type="org.polarsys.capella.core.data.oa:Entity" id="665b7a9c-0f83-4afd-94d1-864d321320b1"
+              name="Automation Monitor" actor="true" human="true">
+            <ownedFunctionalAllocation xsi:type="org.polarsys.capella.core.data.fa:ComponentFunctionalAllocation"
+                id="5df36ad1-3114-43c5-a6cf-f11d2a93978c" targetElement="#dd0d78e9-3785-4bdc-b956-19dfd7de5ff5"
+                sourceElement="#665b7a9c-0f83-4afd-94d1-864d321320b1"/>
+            <ownedFunctionalAllocation xsi:type="org.polarsys.capella.core.data.fa:ComponentFunctionalAllocation"
+                id="72a61a25-366b-4bc8-bf65-fedd4ca00d58" targetElement="#9e2e0991-a6b8-488a-84ae-0a93d50bd4df"
+                sourceElement="#665b7a9c-0f83-4afd-94d1-864d321320b1"/>
+            <ownedFunctionalAllocation xsi:type="org.polarsys.capella.core.data.fa:ComponentFunctionalAllocation"
+                id="70581a83-3e33-4555-8d70-49ae48c77804" targetElement="#e2cb568d-8df3-419f-bd1c-292661bb5bca"
+                sourceElement="#665b7a9c-0f83-4afd-94d1-864d321320b1"/>
+            <ownedFunctionalAllocation xsi:type="org.polarsys.capella.core.data.fa:ComponentFunctionalAllocation"
+                id="33d4b1df-595d-49bb-b0f7-37a90722f4d4" targetElement="#69aaefe6-a32a-43a2-883f-2c83ddf97623"
+                sourceElement="#665b7a9c-0f83-4afd-94d1-864d321320b1"/>
+            <ownedFunctionalAllocation xsi:type="org.polarsys.capella.core.data.fa:ComponentFunctionalAllocation"
+                id="8b71e63a-13fd-46f9-8814-8e78134de089" targetElement="#5e028a78-f2fe-47be-b856-3271b914a5e4"
+                sourceElement="#665b7a9c-0f83-4afd-94d1-864d321320b1"/>
+            <ownedFunctionalAllocation xsi:type="org.polarsys.capella.core.data.fa:ComponentFunctionalAllocation"
+                id="0bcc6d03-c560-4004-8e68-4c56e4e4fd5b" targetElement="#2363c46b-d07d-4ff3-ab7e-f5f0351d6733"
+                sourceElement="#665b7a9c-0f83-4afd-94d1-864d321320b1"/>
           </ownedEntities>
         </ownedEntities>
         <ownedEntities xsi:type="org.polarsys.capella.core.data.oa:Entity" id="d56ee5f9-6968-4cc7-8131-0976fbb8e2ad"
